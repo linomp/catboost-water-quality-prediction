@@ -5,6 +5,4 @@ the government’s open data of the previous measurements.
 
 https://www.kaggle.com/competitions/drinking-water-quality/overview
 
-## Notes
-
-- wittgenstein model interpreting feature has a bug: https://github.com/imoscovitz/wittgenstein/pull/24
+_Best accuracy obtained:_ 0.90425
