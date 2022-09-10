@@ -8,3 +8,9 @@ https://www.kaggle.com/competitions/drinking-water-quality/overview
 **Model used:** CatBoost
 
 **Best accuracy obtained:** 0.90425
+
+## Setup
+
+1. Clone the repo
+2. Create a virtual environment and activate it
+3. Run: `pip install -r requirements.txt`
