@@ -32,7 +32,6 @@ def get_catboost_roc_auc(model, X, y, categorical_features_indexes):
 
 
 def train_catboost_classifier(train, test, target, max_rules=3):
-    # Fit a 'complex' model - CatBoostClassifier
     X_train = train.drop([target], axis=1)
     y_train = train[target]
     X_test = test.drop([target], axis=1)
@@ -54,12 +53,12 @@ def train_catboost_classifier(train, test, target, max_rules=3):
               use_best_model=True,
               eval_set=test_pool)
 
-    # Get Catboost model metrics
-
+    # Plot feature importances
     explainer = shap.TreeExplainer(model)
     shap_values = explainer.shap_values(X_train)
     shap.summary_plot(shap_values, X_train)
 
-    catboost_auc_score = get_catboost_roc_auc(model, X_test, y_test, categorical_features_indexes)
+    # Plot ROC curve & compute accuracy
+    get_catboost_roc_auc(model, X_test, y_test, categorical_features_indexes)
 
     return model

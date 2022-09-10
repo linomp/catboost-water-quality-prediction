@@ -16,17 +16,8 @@ if __name__ == '__main__':
     except FileNotFoundError:
         dataset = pd.read_csv('data/inputs/train.csv')
 
-        # # split data into train and test
-        # train = dataset.sample(frac=0.6)
-        # test = dataset.drop(train.index)
-
-        # split stratified with sklearn
+        # stratified split with sklearn
         train, test = train_test_split(dataset, test_size=0.33, stratify=dataset[target])
-
-        # TODO: explore better splitting
-        # TODO: data cleaning strategy?  (CATBOOST doesnt need it)
-        # TODO: optimize hyperparams, grid search?
-        # TODO: add cross validation?
 
         model = train_catboost_classifier(train, test, target=target)
 
