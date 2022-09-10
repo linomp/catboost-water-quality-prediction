@@ -5,4 +5,6 @@ the government’s open data of the previous measurements.
 
 https://www.kaggle.com/competitions/drinking-water-quality/overview
 
-_Best accuracy obtained:_ 0.90425
+**Model used:** CatBoost
+
+**Best accuracy obtained:** 0.90425
