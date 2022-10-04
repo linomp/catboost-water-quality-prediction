@@ -7,7 +7,7 @@ https://www.kaggle.com/competitions/drinking-water-quality/overview
 
 **Model used:** CatBoost
 
-**Best accuracy obtained:** 0.90425
+**Final accuracy obtained:** 0.84210
 
 ## Setup
 
